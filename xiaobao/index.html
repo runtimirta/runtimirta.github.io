@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小宝寻爱网花花世界-都市情感交友社区与寻爱话题指南</title>
+<meta name="description" content="小宝寻爱网花花世界是一个面向都市单身人群的情感交友主题社区，提供寻爱话题讨论、交友观念解析、情感经验分享与安全交友指南，帮助你在花花世界中理性寻找合适的关系。">
+<meta name="keywords" content="小宝寻爱网花花世界,寻爱网,情感交友社区,都市单身交友,情感话题,交友指南">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --rose:#e05a7a;
+    --rose-deep:#b83c5c;
+    --rose-soft:#fdeef2;
+    --ink:#2c2530;
+    --ink-soft:#6b6270;
+    --line:#f0e2e7;
+    --bg:#fffafb;
+    --card:#ffffff;
+    --gold:#d9a441;
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  ul,ol{list-style:none;}
+
+  .wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- 顶部 ---------- */
+  .topbar{
+    background:linear-gradient(90deg,#3a2b33,#5a3a48);
+    color:#f6e6ec;
+    font-size:13px;
+    letter-spacing:.3px;
+  }
+  .topbar .wrap{
+    display:flex;justify-content:space-between;align-items:center;
+    height:38px;gap:12px;flex-wrap:wrap;
+  }
+  .topbar span.tagline{opacity:.85;}
+
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,250,251,.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;height:70px;
+  }
+  .logo{display:flex;align-items:center;gap:11px;}
+  .logo .mark{
+    width:42px;height:42px;border-radius:50%;
+    background:radial-gradient(circle at 32% 30%,#ff8ea8,#c93e60 70%);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:700;font-size:17px;
+    box-shadow:0 4px 12px rgba(200,62,96,.32);
+    flex:none;
+  }
+  .logo .txt b{display:block;font-size:18px;letter-spacing:.5px;}
+  .logo .txt small{display:block;font-size:11px;color:var(--ink-soft);letter-spacing:2px;}
+
+  nav.main-nav{display:flex;gap:6px;flex-wrap:wrap;}
+  nav.main-nav a{
+    padding:8px 14px;border-radius:20px;font-size:15px;color:var(--ink-soft);
+    transition:.22s;
+  }
+  nav.main-nav a:hover{background:var(--rose-soft);color:var(--rose-deep);}
+  nav.main-nav a.active{background:var(--rose);color:#fff;}
+
+  .head-cta{
+    background:var(--rose);color:#fff;padding:9px 20px;border-radius:22px;
+    font-size:14px;font-weight:600;white-space:nowrap;
+    box-shadow:0 5px 14px rgba(224,90,122,.34);
+    transition:.22s;
+  }
+  .head-cta:hover{background:var(--rose-deep);}
+
+  /* ---------- 首屏 ---------- */
+  .hero{
+    background:
+      radial-gradient(900px 380px at 82% -10%,rgba(255,190,208,.55),transparent 65%),
+      radial-gradient(700px 320px at 6% 110%,rgba(217,164,65,.16),transparent 60%),
+      linear-gradient(180deg,#fff6f8,#fffafb);
+    padding:56px 0 46px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center;
+  }
+  .hero h1{
+    font-size:38px;line-height:1.35;letter-spacing:.5px;margin-bottom:18px;
+  }
+  .hero h1 em{
+    font-style:normal;color:var(--rose-deep);
+    background:linear-gradient(180deg,transparent 62%,rgba(255,190,208,.75) 62%);
+  }
+  .hero p.lead{
+    font-size:16.5px;color:var(--ink-soft);margin-bottom:26px;max-width:560px;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:12px 26px;border-radius:26px;font-size:15px;
+    font-weight:600;transition:.22s;
+  }
+  .btn-primary{background:var(--rose);color:#fff;box-shadow:0 6px 16px rgba(224,90,122,.32);}
+  .btn-primary:hover{background:var(--rose-deep);transform:translateY(-1px);}
+  .btn-ghost{border:1.5px solid var(--rose);color:var(--rose-deep);}
+  .btn-ghost:hover{background:var(--rose-soft);}
+
+  .hero-stats{
+    display:flex;gap:34px;margin-top:34px;flex-wrap:wrap;
+  }
+  .hero-stats div b{display:block;font-size:22px;color:var(--rose-deep);}
+  .hero-stats div span{font-size:13px;color:var(--ink-soft);}
+
+  .hero-card{
+    background:var(--card);border:1px solid var(--line);border-radius:20px;
+    padding:26px 24px;box-shadow:0 18px 42px rgba(120,70,90,.10);
+  }
+  .hero-card h3{
+    font-size:16px;margin-bottom:16px;display:flex;align-items:center;gap:8px;
+  }
+  .hero-card h3::before{
+    content:"";width:4px;height:16px;border-radius:2px;background:var(--rose);
+  }
+  .topic-list li{
+    display:flex;gap:10px;align-items:flex-start;
+    padding:11px 0;border-bottom:1px dashed var(--line);font-size:14.5px;
+  }
+  .topic-list li:last-child{border-bottom:none;}
+  .topic-list .idx{
+    flex:none;width:22px;height:22px;border-radius:6px;background:var(--rose-soft);
+    color:var(--rose-deep);font-size:12px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;margin-top:3px;
+  }
+  .topic-list .meta{display:block;font-size:12px;color:var(--ink-soft);margin-top:2px;}
+
+  /* ---------- 通用区块 ---------- */
+  section.block{padding:54px 0;}
+  section.block.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{margin-bottom:30px;}
+  .sec-head .kicker{
+    font-size:12.5px;letter-spacing:3px;color:var(--rose);font-weight:700;
+    text-transform:uppercase;margin-bottom:8px;
+  }
+  .sec-head h2{font-size:26px;letter-spacing:.5px;}
+  .sec-head p{color:var(--ink-soft);font-size:15px;margin-top:10px;max-width:760px;}
+
+  /* ---------- 分类导航 ---------- */
+  .cat-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  }
+  .cat-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 20px;transition:.24s;
+  }
+  .cat-card:hover{border-color:#f3c2d0;transform:translateY(-3px);box-shadow:0 12px 26px rgba(190,110,140,.13);}
+  .cat-card .ico{
+    width:40px;height:40px;border-radius:11px;background:var(--rose-soft);
+    display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:14px;
+  }
+  .cat-card h3{font-size:16.5px;margin-bottom:8px;}
+  .cat-card p{font-size:13.5px;color:var(--ink-soft);}
+
+  /* ---------- 文章列表 ---------- */
+  .article-layout{
+    display:grid;grid-template-columns:1fr 330px;gap:40px;align-items:start;
+  }
+  .post{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 26px;margin-bottom:18px;transition:.24s;
+  }
+  .post:hover{border-color:#f3c2d0;box-shadow:0 10px 24px rgba(190,110,140,.10);}
+  .post .tagline{
+    font-size:12.5px;color:var(--rose-deep);background:var(--rose-soft);
+    display:inline-block;padding:3px 11px;border-radius:12px;margin-bottom:12px;
+  }
+  .post h3{font-size:19px;margin-bottom:10px;line-height:1.5;}
+  .post p{font-size:14.5px;color:var(--ink-soft);}
+  .post .foot{
+    margin-top:14px;font-size:12.5px;color:#a2959c;display:flex;gap:16px;flex-wrap:wrap;
+  }
+
+  /* ---------- 侧栏 ---------- */
+  aside .panel{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 20px;margin-bottom:20px;
+  }
+  aside .panel h3{
+    font-size:16px;margin-bottom:16px;padding-left:11px;position:relative;
+  }
+  aside .panel h3::before{
+    content:"";position:absolute;left:0;top:5px;width:4px;height:15px;
+    border-radius:2px;background:var(--rose);
+  }
+  .rank-list li{
+    display:flex;gap:11px;align-items:center;padding:9px 0;font-size:14px;
+  }
+  .rank-list .no{
+    flex:none;width:20px;height:20px;border-radius:5px;background:#f6eef1;
+    color:#a3768a;font-size:12px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .rank-list li:nth-child(1) .no{background:var(--rose);color:#fff;}
+  .rank-list li:nth-child(2) .no{background:#f0a8ba;color:#fff;}
+  .rank-list li:nth-child(3) .no{background:#f6c8d3;color:#8a4f63;}
+
+  .tips-list li{
+    font-size:14px;color:var(--ink-soft);padding:8px 0 8px 20px;position:relative;
+  }
+  .tips-list li::before{
+    content:"♥";position:absolute;left:0;top:8px;color:var(--rose);font-size:11px;
+  }
+
+  /* ---------- 指南步骤 ---------- */
+  .steps{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  .step{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 22px;position:relative;
+  }
+  .step .num{
+    font-size:30px;font-weight:800;color:#f7dde5;line-height:1;margin-bottom:12px;
+    letter-spacing:1px;
+  }
+  .step h3{font-size:16.5px;margin-bottom:9px;}
+  .step p{font-size:14px;color:var(--ink-soft);}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:860px;}
+  .faq details{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:16px 20px;margin-bottom:12px;transition:.2s;
+  }
+  .faq details[open]{border-color:#f3c2d0;box-shadow:0 8px 20px rgba(190,110,140,.09);}
+  .faq summary{
+    cursor:pointer;font-size:15.5px;font-weight:600;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{
+    content:"＋";color:var(--rose);font-size:17px;font-weight:400;flex:none;
+  }
+  .faq details[open] summary::after{content:"－";}
+  .faq .ans{
+    font-size:14.5px;color:var(--ink-soft);margin-top:12px;padding-top:12px;
+    border-top:1px dashed var(--line);
+  }
+
+  /* ---------- 声明条 ---------- */
+  .notice{
+    background:linear-gradient(90deg,#fff3f6,#fffafb);
+    border:1px solid #f7dbe3;border-radius:var(--radius);
+    padding:22px 24px;font-size:14px;color:#7d5f6b;
+  }
+  .notice b{color:var(--rose-deep);}
+
+  /* ---------- 页脚 ---------- */
+  footer.site{
+    background:#33272e;color:#cbb9c1;padding:46px 0 26px;margin-top:20px;
+    font-size:14px;
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;
+  }
+  footer.site h4{color:#fff;font-size:15px;margin-bottom:14px;letter-spacing:.5px;}
+  footer.site p{font-size:13.5px;line-height:1.85;color:#b4a2ab;}
+  footer.site li{padding:5px 0;font-size:13.5px;}
+  footer.site li a:hover{color:#ffb9ca;}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,.10);margin-top:34px;padding-top:18px;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-size:12.5px;color:#9c8b94;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:1000px){
+    .hero-grid{grid-template-columns:1fr;gap:34px;}
+    .article-layout{grid-template-columns:1fr;}
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+    .steps{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    .head-inner{height:auto;padding:12px 0;flex-wrap:wrap;}
+    nav.main-nav{order:3;width:100%;overflow-x:auto;padding-bottom:4px;}
+    nav.main-nav a{padding:7px 12px;font-size:14px;white-space:nowrap;}
+    .hero{padding:38px 0 34px;}
+    .hero h1{font-size:27px;}
+    .hero-stats{gap:22px;}
+    section.block{padding:40px 0;}
+    .sec-head h2{font-size:22px;}
+    .post{padding:20px 18px;}
+    .post h3{font-size:17px;}
+    .cat-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;gap:24px;}
+    .topbar .wrap{height:auto;padding:8px 0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="tagline">都市情感交友主题社区 · 理性寻爱，认真相处</span>
+    <span>内容面向成年读者 · 请文明交流</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top">
+      <span class="mark">宝</span>
+      <span class="txt">
+        <b>小宝寻爱网</b>
+        <small>花花世界</small>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="#top" class="active">首页</a>
+      <a href="#topics">寻爱话题</a>
+      <a href="#posts">经验分享</a>
+      <a href="#guide">交友指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="head-cta" href="#guide">开始了解</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>在<em>花花世界</em>里，认真聊一聊寻爱这件事</h1>
+        <p class="lead">
+          “小宝寻爱网花花世界”是一个围绕都市单身人群情感与交友的主题社区。我们不做速配承诺，也不渲染焦虑，
+          只把寻爱过程中真正会遇到的问题——如何认识人、怎么判断合适、怎样保护自己——拆开来讲清楚，
+          让每一次心动都更有把握。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#topics">浏览寻爱话题</a>
+          <a class="btn btn-ghost" href="#guide">查看交友指南</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>6 大</b><span>寻爱话题方向</span></div>
+          <div><b>3 步</b><span>理性交友流程</span></div>
+          <div><b>持续</b><span>更新经验分享</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>本周热议话题</h3>
+        <ul class="topic-list">
+          <li>
+            <span class="idx">1</span>
+            <span>刚认识就聊得很热，是心动还是错觉？
+              <span class="meta">情感节奏 · 讨论中</span>
+            </span>
+          </li>
+          <li>
+            <span class="idx">2</span>
+            <span>线上认识的人，多久见面比较合适
+              <span class="meta">见面时机 · 讨论中</span>
+            </span>
+          </li>
+          <li>
+            <span class="idx">3</span>
+            <span>对方总在回避现实信息，该不该继续
+              <span class="meta">安全提醒 · 讨论中</span>
+            </span>
+          </li>
+          <li>
+            <span class="idx">4</span>
+            <span>成年人的恋爱，怎么谈钱才不尴尬
+              <span class="meta">现实议题 · 讨论中</span>
+            </span>
+          </li>
+          <li>
+            <span class="idx">5</span>
+            <span>相亲和自由认识，哪一种更适合你
+              <span class="meta">认识方式 · 讨论中</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 话题分类 -->
+  <section class="block" id="topics">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Topics</div>
+        <h2>寻爱话题的六个方向</h2>
+        <p>感情问题很少是单一维度的。把它拆成认识、判断、相处、现实、边界和成长六个方向，更容易看清自己卡在哪一步。</p>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="ico">🔍</div>
+          <h3>认识与拓展</h3>
+          <p>圈子小、时间少的时候，如何通过兴趣、朋友介绍、线下活动等渠道自然地认识新的人。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">💭</div>
+          <h3>心动与判断</h3>
+          <p>区分短暂好感与长期吸引，识别自己在关系初期容易出现的过度投入和理想化倾向。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">🌱</div>
+          <h3>相处与沟通</h3>
+          <p>从日常聊天到冲突处理，如何表达需求、听懂对方，让关系在磨合中稳定下来。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">🏠</div>
+          <h3>现实与规划</h3>
+          <p>距离、工作节奏、家庭期待、经济观念等现实因素，如何在关系早期就坦诚交换看法。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">🛡️</div>
+          <h3>边界与安全</h3>
+          <p>保护个人信息、警惕金钱索取、保持独立判断，是任何一段关系开始前的基本功课。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">✨</div>
+          <h3>自我与成长</h3>
+          <p>先把自己的生活过扎实，再进入一段关系。稳定的自我往往比技巧更能带来好的相遇。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 经验分享 + 侧栏 -->
+  <section class="block alt" id="posts">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Stories</div>
+        <h2>经验分享与观察</h2>
+        <p>下面这些内容来自社区里常见的讨论方向，重点是把问题讲明白，而不是给出万能答案。</p>
+      </div>
+
+      <div class="article-layout">
+        <div>
+          <article class="post">
+            <span class="tagline">认识方式</span>
+            <h3>圈子小的人，怎么把“遇见”变成一件可以安排的事</h3>
+            <p>很多人把认识新朋友寄托在偶然上，但偶然往往不会主动发生。更实际的做法是把渠道分成三类：熟人介绍、兴趣社群、线下活动。熟人介绍的优势是信息相对可信，兴趣社群的优势是有共同话题，线下活动的优势是能直接感受一个人的真实状态。三类渠道同时保持低频但持续的参与，比短期内密集尝试更有效。</p>
+            <div class="foot"><span>寻爱话题</span><span>阅读约 4 分钟</span></div>
+          </article>
+
+          <article class="post">
+            <span class="tagline">关系节奏</span>
+            <h3>聊得火热却迟迟不见面，问题通常出在哪里</h3>
+            <p>线上聊天的热度容易制造亲密感，但它和真实相处是两件事。如果一段关系长期停留在文字层面，通常有三种可能：一方本身没有见面的打算、双方都在等对方先开口、或者现实条件暂时不允许。区分这三种情况的方法很简单——直接而礼貌地提出一次具体的见面建议，看对方的回应是推进、回避还是拖延，答案往往就清楚了。</p>
+            <div class="foot"><span>关系节奏</span><span>阅读约 3 分钟</span></div>
+          </article>
+
+          <article class="post">
+            <span class="tagline">现实议题</span>
+            <h3>关于钱和未来，早一点聊反而更轻松</h3>
+            <p>很多人担心谈钱伤感情，于是把消费习惯、储蓄观念、对未来的规划一直往后拖。结果是关系越深入，越难开口。比较稳妥的方式是在关系稳定但不沉重的时候，用分享代替盘问：先讲自己的情况，再自然地询问对方的想法。重点不是得出统一结论，而是确认彼此的差异是否在可接受的范围内。</p>
+            <div class="foot"><span>现实规划</span><span>阅读约 4 分钟</span></div>
+          </article>
+
+          <article class="post">
+            <span class="tagline">安全边界</span>
+            <h3>几个值得在关系早期就留意的信号</h3>
+            <p>无论通过什么渠道认识，如果对方在关系早期就频繁涉及借款、投资、代付、索要账号验证码，或者始终回避视频、见面和任何可核实的信息，都应当提高警惕。真正想认真相处的人，通常不会介意你谨慎一点。把“慢一点”当作正常的节奏，而不是需要道歉的事。</p>
+            <div class="foot"><span>安全提醒</span><span>阅读约 3 分钟</span></div>
+          </article>
+        </div>
+
+        <aside>
+          <div class="panel">
+            <h3>热门讨论榜</h3>
+            <ul class="rank-list">
+              <li><span class="no">1</span><span>第一次见面选什么场合更合适</span></li>
+              <li><span class="no">2</span><span>对方回复变慢，要不要主动问</span></li>
+              <li><span class="no">3</span><span>异地关系能维持多久</span></li>
+              <li><span class="no">4</span><span>父母介绍的对象怎么相处</span></li>
+              <li><span class="no">5</span><span>如何礼貌地结束一段不合适的关系</span></li>
+              <li><span class="no">6</span><span>单身久了，怎么调整心态</span></li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>交友小提示</h3>
+            <ul class="tips-list">
+              <li>首次见面选择人多、公开的场所</li>
+              <li>不向刚认识的人转账或代付</li>
+              <li>重要证件与账号信息不轻易提供</li>
+              <li>把见面安排告知一位信任的朋友</li>
+              <li>保留聊天记录，遇到异常及时止损</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>关于本站</h3>
+            <p style="font-size:14px;color:var(--ink-soft);">
+              小宝寻爱网花花世界是一个情感与交友主题的内容社区，提供话题讨论、经验分享与安全提示，
+              不提供会员撮合、收费介绍或任何形式的线下中介服务。
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 交友指南 -->
+  <section class="block" id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Guide</div>
+        <h2>理性寻爱的三步流程</h2>
+        <p>把寻爱当成一件需要方法的事，而不是只靠运气。下面三步可以反复使用，适用于大多数认识渠道。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <div class="num">01</div>
+          <h3>先明确自己要什么</h3>
+          <p>写下三件你在关系中最看重的事，以及三件无法接受的事。标准不必完美，但要真实，这样在遇到选择时才不会反复摇摆。</p>
+        </article>
+        <article class="step">
+          <div class="num">02</div>
+          <h3>保持稳定而不过度的接触</h3>
+          <p>认识新的人需要频率，但不需要用力过猛。每周固定投入一点时间在真实的交流上，比短期内密集试探更容易建立信任。</p>
+        </article>
+        <article class="step">
+          <div class="num">03</div>
+          <h3>用现实相处做判断</h3>
+          <p>文字和照片只能提供有限信息。见面、共同完成一件小事、观察对方如何对待他人，这些才是更可靠的判断依据。</p>
+        </article>
+      </div>
+
+      <div class="notice" style="margin-top:30px;">
+        <b>需要提醒的是：</b>任何关系都不存在保证成功的方法。本文与本站内容仅为经验性讨论，不构成心理、法律或医疗建议。
+        如果你在关系中遇到持续的困扰或安全风险，请优先向身边可信赖的人求助，必要时联系相关专业机构。
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block alt" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">FAQ</div>
+        <h2>常见问题</h2>
+        <p>整理了几个在寻爱话题中被反复问到的问题，回答尽量直接。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>“小宝寻爱网花花世界”是一个交友平台吗？</summary>
+          <div class="ans">它是一个情感与交友主题的内容社区，主要提供话题讨论、经验分享和交友安全提示。页面不提供会员注册撮合、收费介绍或线下中介服务，也不对任何具体关系结果作出承诺。</div>
+        </details>
+        <details>
+          <summary>单身很久了，应该从哪里开始改变？</summary>
+          <div class="ans">可以先从扩大日常接触面开始：恢复一两项线下兴趣、和久未联系的朋友保持往来、参与一些固定周期的小型活动。同时把“必须找到对象”的压力暂时放下，先让自己处在一个更容易遇到人的状态里。</div>
+        </details>
+        <details>
+          <summary>线上认识的人，多久见面比较合适？</summary>
+          <div class="ans">没有统一标准，但通常建议在双方都有基本了解、并且已经有过语音或视频交流之后再安排见面。首次见面选择白天、人多、交通便利的公共场所，并提前告知一位朋友你的行程。</div>
+        </details>
+        <details>
+          <summary>怎么判断对方是不是在认真相处？</summary>
+          <div class="ans">可以观察三点：是否愿意在现实中推进关系、是否在重要问题上给出明确回应、是否尊重你的节奏和边界。持续回避、信息前后矛盾、频繁涉及金钱请求，都是需要警惕的信号。</div>
+        </details>
+        <details>
+          <summary>关系里出现分歧，一定要马上解决吗？</summary>
+          <div class="ans">不必。情绪激烈时先暂停，等双方平静后再谈，往往更有效。重要的不是当场分出对错，而是确认彼此是否愿意继续沟通、是否能在差异中找到可接受的相处方式。</div>
+        </details>
+        <details>
+          <summary>网站内容可以转载吗？</summary>
+          <div class="ans">站内文字为原创整理，欢迎在注明来源的前提下合理引用。请勿用于商业用途，也不要对内容进行断章取义的修改后传播。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>小宝寻爱网 · 花花世界</h4>
+        <p>一个围绕都市情感与交友话题的内容社区。我们希望把寻爱这件事讲得更清楚一点，让每个人在做选择时都更从容。</p>
+      </div>
+      <div>
+        <h4>内容板块</h4>
+        <ul>
+          <li><a href="#topics">寻爱话题</a></li>
+          <li><a href="#posts">经验分享</a></li>
+          <li><a href="#guide">交友指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>安全提醒</h4>
+        <ul>
+          <li>不向陌生人转账</li>
+          <li>保护个人隐私信息</li>
+          <li>首次见面选择公共场所</li>
+          <li>遇到异常及时止损</li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <ul>
+          <li>内容面向成年读者</li>
+          <li>不提供中介撮合服务</li>
+          <li>不承诺任何关系结果</li>
+          <li>欢迎理性交流与反馈</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 小宝寻爱网花花世界 · 内容仅供交流参考</span>
+      <span>请文明发言，尊重他人边界</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var links = document.querySelectorAll('nav.main-nav a');
+    var sections = [];
+    links.forEach(function (a) {
+      var id = a.getAttribute('href');
+      if (id && id.charAt(0) === '#' && id.length > 1) {
+        var el = document.getElementById(id.slice(1));
+        if (el) sections.push({ link: a, el: el });
+      }
+    });
+    if (!sections.length || !('IntersectionObserver' in window)) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        sections.forEach(function (item) {
+          item.link.classList.toggle('active', item.el === entry.target);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function (item) { observer.observe(item.el); });
+  })();
+</script>
+
+</body>
+  </html>
