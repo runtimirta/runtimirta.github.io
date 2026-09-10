@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>最早的一部神话集 - 中国上古神话典籍源流与阅读指南</title>
+<meta name="description" content="最早的一部神话集指的是中国古代保存神话材料最集中的典籍，通常认为是《山海经》。本文梳理其成书背景、内容结构、神话篇目、与其他早期文献的关系，以及阅读与查阅方法。">
+<meta name="keywords" content="最早的一部神话集,山海经,中国神话,上古神话,神话典籍,神话集">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#231a14;
+  --ink-soft:#584838;
+  --paper:#f6efe2;
+  --paper-2:#fffaf0;
+  --line:#d9c9ad;
+  --accent:#8c3b1e;
+  --accent-2:#b8763a;
+  --jade:#3f6b5a;
+  --shadow:0 10px 30px rgba(70,48,26,.12);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Songti SC","STSong","Noto Serif SC",Georgia,"Microsoft YaHei",serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;}
+.wrap{width:min(1160px,92%);margin:0 auto;}
+
+/* 页眉 */
+.site-header{
+  background:linear-gradient(180deg,#2c211a 0%,#3d2c20 100%);
+  color:#f3e7d3;
+  border-bottom:3px solid var(--accent-2);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:18px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:14px;}
+.brand-mark{
+  width:52px;height:52px;flex:0 0 52px;
+  border:2px solid var(--accent-2);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;color:var(--accent-2);background:rgba(255,255,255,.04);
+  letter-spacing:1px;
+}
+.brand-text h1{
+  font-size:22px;margin:0;letter-spacing:2px;font-weight:700;color:#fbf3e4;
+}
+.brand-text p{
+  margin:2px 0 0;font-size:12.5px;color:#c9b394;letter-spacing:1px;
+}
+.header-note{
+  font-size:13px;color:#c9b394;max-width:330px;text-align:right;
+}
+
+/* 导航 */
+.main-nav{
+  background:#1d1611;border-bottom:1px solid #4a382a;
+  position:sticky;top:0;z-index:40;
+}
+.nav-inner{
+  display:flex;flex-wrap:wrap;gap:6px;padding:0;
+}
+.nav-inner a{
+  display:block;padding:14px 18px;color:#e2d3bd;font-size:14.5px;
+  letter-spacing:1px;border-bottom:3px solid transparent;transition:.2s;
+}
+.nav-inner a:hover{
+  color:#fff;background:#2a2019;border-bottom-color:var(--accent-2);
+  text-decoration:none;
+}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(circle at 12% 18%,rgba(184,118,58,.20),transparent 55%),
+    radial-gradient(circle at 88% 78%,rgba(63,107,90,.22),transparent 55%),
+    #f8f2e6;
+  border-bottom:1px solid var(--line);
+  padding:56px 0 48px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.35fr .95fr;gap:44px;align-items:center;
+}
+.hero-kicker{
+  display:inline-block;font-size:12.5px;letter-spacing:3px;color:var(--accent);
+  border:1px solid var(--accent-2);border-radius:999px;padding:4px 14px;
+  margin-bottom:18px;background:#fff8ec;
+}
+.hero h2{
+  font-size:38px;line-height:1.35;margin:0 0 18px;letter-spacing:1px;
+}
+.hero h2 em{font-style:normal;color:var(--accent);}
+.hero p.lead{
+  font-size:16.5px;color:var(--ink-soft);margin:0 0 14px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:4px;font-size:15px;
+  letter-spacing:1px;transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--accent);color:#fff8ec;}
+.btn-primary:hover{background:#752f16;text-decoration:none;}
+.btn-ghost{border-color:var(--accent-2);color:var(--accent);background:#fffaf0;}
+.btn-ghost:hover{background:#f2e3cd;text-decoration:none;}
+.hero-card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:8px;
+  padding:26px 26px 20px;box-shadow:var(--shadow);position:relative;
+}
+.hero-card::before{
+  content:"典";position:absolute;top:-16px;left:22px;width:38px;height:38px;
+  background:var(--jade);color:#f4efe2;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;font-size:19px;
+}
+.hero-card h3{margin:14px 0 10px;font-size:18px;letter-spacing:1px;}
+.hero-card dl{margin:0;font-size:14.5px;}
+.hero-card dt{color:var(--accent);font-weight:700;margin-top:10px;}
+.hero-card dd{margin:2px 0 0;color:var(--ink-soft);}
+
+/* 通用区块 */
+section{padding:54px 0;}
+.section-head{margin-bottom:30px;border-left:5px solid var(--accent-2);padding-left:16px;}
+.section-head h2{font-size:26px;margin:0 0 8px;letter-spacing:1px;}
+.section-head p{margin:0;color:var(--ink-soft);font-size:15px;}
+.alt-bg{background:#f1e8d8;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+
+/* 概述双栏 */
+.overview-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;}
+.article-body p{margin:0 0 16px;font-size:16px;color:#3a2d22;}
+.article-body strong{color:var(--accent);}
+.pull-quote{
+  border-left:4px solid var(--jade);background:#fffaf0;
+  padding:16px 20px;margin:22px 0;color:var(--ink-soft);font-size:15px;
+}
+.side-panel{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:8px;
+  padding:22px 22px 16px;box-shadow:var(--shadow);
+}
+.side-panel h3{margin:0 0 14px;font-size:17px;letter-spacing:1px;color:var(--accent);}
+.side-list{list-style:none;margin:0;padding:0;}
+.side-list li{
+  padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px;
+  color:var(--ink-soft);
+}
+.side-list li:last-child{border-bottom:none;}
+.side-list span{color:var(--ink);font-weight:700;}
+
+/* 篇目卡片 */
+.card-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:22px;
+}
+.card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:8px;
+  padding:22px;transition:.22s;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--accent-2);}
+.card-tag{
+  font-size:12px;letter-spacing:2px;color:var(--jade);margin-bottom:8px;
+}
+.card h3{margin:0 0 10px;font-size:18px;letter-spacing:1px;}
+.card p{margin:0 0 12px;font-size:14.5px;color:var(--ink-soft);flex:1;}
+.card-meta{font-size:13px;color:#8a7355;border-top:1px dashed var(--line);padding-top:10px;}
+
+/* 结构表 */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--paper-2);}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:14.5px;}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:#e9dcc6;color:#3a2b1e;font-weight:700;letter-spacing:1px;white-space:nowrap;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:nth-child(even){background:#fdf8ee;}
+
+/* 时间线 */
+.timeline{position:relative;margin:0;padding:0 0 0 26px;list-style:none;}
+.timeline::before{
+  content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line);
+}
+.timeline li{position:relative;padding:0 0 24px 18px;}
+.timeline li::before{
+  content:"";position:absolute;left:-26px;top:8px;width:12px;height:12px;
+  border-radius:50%;background:var(--accent-2);border:2px solid var(--paper);
+  box-shadow:0 0 0 2px var(--accent-2);
+}
+.timeline h3{margin:0 0 6px;font-size:16.5px;letter-spacing:1px;}
+.timeline p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+
+/* 阅读建议 */
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+.tip{
+  background:#fffaf0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:6px;padding:18px 20px;
+}
+.tip h3{margin:0 0 8px;font-size:16px;letter-spacing:1px;}
+.tip p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+
+/* FAQ */
+.faq-list{max-width:900px;}
+.faq-item{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:8px;
+  margin-bottom:14px;overflow:hidden;
+}
+.faq-item summary{
+  cursor:pointer;padding:16px 20px;font-size:16px;font-weight:700;
+  letter-spacing:.5px;list-style:none;position:relative;color:#33261b;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{
+  content:"+";position:absolute;right:20px;top:14px;font-size:20px;color:var(--accent-2);
+  transition:.2s;
+}
+.faq-item[open] summary::after{content:"−";}
+.faq-item .faq-body{padding:0 20px 18px;font-size:14.8px;color:var(--ink-soft);}
+.faq-item .faq-body p{margin:0 0 10px;}
+.faq-item .faq-body p:last-child{margin-bottom:0;}
+
+/* 页脚 */
+.site-footer{
+  background:#251c15;color:#c4b198;padding:44px 0 26px;font-size:14px;
+  border-top:3px solid var(--accent-2);
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;
+}
+.footer-grid h4{
+  color:#f0e2cb;font-size:15px;margin:0 0 12px;letter-spacing:1.5px;
+}
+.footer-grid p{margin:0 0 10px;line-height:1.8;}
+.footer-grid ul{list-style:none;margin:0;padding:0;}
+.footer-grid li{margin-bottom:8px;}
+.footer-grid a{color:#c4b198;}
+.footer-grid a:hover{color:#fff;}
+.footer-bottom{
+  margin-top:30px;padding-top:18px;border-top:1px solid #3d2f24;
+  font-size:13px;color:#8f7c66;display:flex;justify-content:space-between;
+  gap:12px;flex-wrap:wrap;
+}
+
+/* 响应式 */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:30px;}
+  .overview-grid{grid-template-columns:1fr;gap:26px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .hero h2{font-size:31px;}
+  .header-note{text-align:left;max-width:none;}
+}
+@media (max-width:640px){
+  .hero{padding:38px 0 34px;}
+  .hero h2{font-size:26px;}
+  section{padding:38px 0;}
+  .section-head h2{font-size:22px;}
+  .nav-inner a{padding:12px 13px;font-size:13.5px;}
+  .footer-grid{grid-template-columns:1fr;}
+  .brand-text h1{font-size:19px;}
+  .header-inner{padding:14px 0;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-mark">神</div>
+      <div class="brand-text">
+        <h1>最早的一部神话集</h1>
+        <p>中国上古神话典籍源流与阅读指南</p>
+      </div>
+    </div>
+    <p class="header-note">从典籍成书、篇目结构到阅读方法，梳理“最早的一部神话集”这一问题的来龙去脉。</p>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="wrap nav-inner">
+    <a href="#intro">问题解答</a>
+    <a href="#structure">内容结构</a>
+    <a href="#chapters">重要篇目</a>
+    <a href="#timeline">成书源流</a>
+    <a href="#compare">相关典籍</a>
+    <a href="#reading">阅读建议</a>
+    <a href="#faq">常见问题</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-kicker">神话典籍 · 入门导读</span>
+        <h2>最早的一部神话集，通常指保存中国上古神话材料<em>最集中的《山海经》</em></h2>
+        <p class="lead">如果问“最早的一部神话集”，多数中国文学史与神话学著作给出的答案是《山海经》。它并非现代意义上的“神话故事集”，而是一部成书过程漫长、由多人陆续整理的地理博物类古籍，却因为保存了大量神祇、异兽、神山与远古传说，成为研究中国上古神话最重要的文献来源之一。</p>
+        <p class="lead">需要说明的是，“最早”是相对而言的：先秦文献中《楚辞·天问》《淮南子》等也保存了神话，但论材料集中程度与神话色彩之浓，《山海经》的地位最为突出。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#intro">先看核心解答</a>
+          <a class="btn btn-ghost" href="#chapters">浏览重要篇目</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>一分钟速览</h3>
+        <dl>
+          <dt>通称</dt>
+          <dd>《山海经》</dd>
+          <dt>性质</dt>
+          <dd>地理博物类古籍，夹杂大量神话材料</dd>
+          <dt>主要部分</dt>
+          <dd>《山经》五卷、《海经》十三卷</dd>
+          <dt>成书特点</dt>
+          <dd>非一人一时之作，战国至汉代陆续编定</dd>
+          <dt>神话代表</dt>
+          <dd>夸父逐日、精卫填海、刑天舞干戚、女娲、西王母等</dd>
+          <dt>阅读难点</dt>
+          <dd>生僻字多、条目零散、异文与注疏并存</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 核心解答 -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>为什么说它是“最早的一部神话集”</h2>
+        <p>把这个问题拆开看：一是“最早”，二是“神话集”，两者都需要一点界定。</p>
+      </div>
+      <div class="overview-grid">
+        <div class="article-body">
+          <p>从现存文献看，中国上古神话并没有像古希腊《神谱》那样一部体系完整、叙事连贯的“神话总集”。神话材料散落在经、史、子、集各类典籍中，而<strong>《山海经》是其中保存神话条目最多、神怪色彩最浓的一部</strong>，因此常被研究者称为中国上古神话的“宝库”。</p>
+          <p>它的“早”，体现在内容层次上。书中许多神祇、神山、异兽的记载，被认为保留了相当古老的观念与口传材料；而它的“集”，则体现在编排方式上——以山川地理为骨架，把神灵、祭祀、物产、异闻分条罗列，形成一种近似目录式的汇编结构。</p>
+          <div class="pull-quote">严格来说，《山海经》不是“神话故事集”，而是一部以地理为纲、以博物为目、夹杂神话与巫术材料的古籍。正因为这种杂糅，它才成为后世神话研究绕不开的起点。</div>
+          <p>另一个容易被忽略的点是：我们今天读到的《山海经》，是经过长期传抄、整理和注释的文本。晋代郭璞为它作注，清代以来又有毕沅、郝懿行等学者的校勘，现代读者接触到的版本，实际上是历代整理成果的叠加。</p>
+          <p>所以，回答“最早的一部神话集是什么”，可以说：<strong>通常指《山海经》</strong>；但如果追问“最早的神话记录出现在哪里”，答案会分散到甲骨、青铜器铭文、《诗经》《楚辞》等更早或同时期的材料中。理解这一点，才能避免把复杂问题简单化。</p>
+        </div>
+        <aside class="side-panel">
+          <h3>相关概念速查</h3>
+          <ul class="side-list">
+            <li><span>神话</span>：关于神祇、创世、英雄与远古事件的叙事，常与祭祀、巫术、宇宙观相关。</li>
+            <li><span>神话集</span>：把分散的神话材料汇集编排成书，未必有统一叙事主线。</li>
+            <li><span>《山经》</span>：偏重山川、动植物、矿产与祭祀，神话成分相对分散。</li>
+            <li><span>《海经》</span>：偏重远方异国、神怪与帝王谱系，神话色彩更浓。</li>
+            <li><span>郭璞注</span>：现存最重要的早期注本，是理解原文的关键参考。</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容结构 -->
+  <section id="structure" class="alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>全书内容结构一览</h2>
+        <p>《山海经》共十八卷，大致可分为《山经》与《海经》两大板块，两部分的写法与关注点并不相同。</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>板块</th>
+              <th>卷次构成</th>
+              <th>主要内容</th>
+              <th>阅读感受</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>《山经》</td>
+              <td>南山经、西山经、北山经、东山经、中山经，共五卷</td>
+              <td>按方位记述山川走向、动植物、矿产、水系与祭祀用物</td>
+              <td>条目密集、格式统一，像一部古代自然与物产志</td>
+            </tr>
+            <tr>
+              <td>《海外经》</td>
+              <td>海外南经、西经、北经、东经，共四卷</td>
+              <td>记述远方国度、异形之人与海外神怪</td>
+              <td>想象色彩浓厚，适合作为神话入门阅读</td>
+            </tr>
+            <tr>
+              <td>《海内经》</td>
+              <td>海内南经、西经、北经、东经，共四卷</td>
+              <td>记述海内地理、部族、器物与帝王世系</td>
+              <td>与历史传说交织，需结合注释理解</td>
+            </tr>
+            <tr>
+              <td>《大荒经》</td>
+              <td>大荒东经、南经、西经、北经，共四卷</td>
+              <td>集中保存帝俊、黄帝、炎帝等神系与神话事件</td>
+              <td>神话研究价值高，是许多著名故事的出处</td>
+            </tr>
+            <tr>
+              <td>《海内经》末卷</td>
+              <td>海内经一卷</td>
+              <td>杂记神灵、发明创造与部族起源</td>
+              <td>篇幅较短，内容杂而集中</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 重要篇目 -->
+  <section id="chapters">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>值得优先阅读的神话篇目</h2>
+        <p>《山海经》条目零散，与其从头硬读，不如先挑神话浓度最高的几类内容入手。</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <p class="card-tag">英雄神话</p>
+          <h3>夸父逐日</h3>
+          <p>记述夸父追逐太阳、道渴而死、弃杖化为邓林的故事。文本极简，却包含意志、失败与转化的多重意涵，是后世引用最多的神话之一。</p>
+          <p class="card-meta">多见于《海外北经》《大荒北经》</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">抗争神话</p>
+          <h3>精卫填海</h3>
+          <p>炎帝之女溺于东海，化为精卫鸟，衔西山木石以填东海。篇幅短小，却常被用来讨论不屈与循环往复的主题。</p>
+          <p class="card-meta">见于《北山经》</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">神祇形象</p>
+          <h3>刑天舞干戚</h3>
+          <p>刑天与帝争神，被断首后以乳为目、以脐为口，继续操持干戚而舞。形象强烈，是研究上古神祇与反抗叙事的重要材料。</p>
+          <p class="card-meta">见于《海外西经》</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">女性神祇</p>
+          <h3>女娲与西王母</h3>
+          <p>书中对女娲的记载较零散，西王母则呈现为半人半兽的威严形象，与后世文学中的形象差异明显，适合对照阅读。</p>
+          <p class="card-meta">散见《大荒西经》《西山经》等</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">帝系传说</p>
+          <h3>帝俊与黄帝世系</h3>
+          <p>《大荒经》保存了较为集中的帝王谱系材料，是讨论上古神系结构、部落起源与神话历史化问题的重要依据。</p>
+          <p class="card-meta">多见于《大荒经》各卷</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">异域想象</p>
+          <h3>海外异国与异形之人</h3>
+          <p>贯胸国、羽民国、三首国等记载，反映了古人对远方世界的想象方式，也常被用于讨论地理观念与文化边界。</p>
+          <p class="card-meta">多见于《海外经》各卷</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 成书源流 -->
+  <section id="timeline" class="alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>成书与流传的大致脉络</h2>
+        <p>《山海经》不是一次写成的，它的文本层次复杂，学界对具体年代仍有不同看法。以下为较通行的认识框架。</p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <h3>先秦时期：材料积累</h3>
+          <p>书中部分内容被认为源自战国甚至更早的口传与记录，涉及山川祭祀、物产知识与神怪传说，可能由不同来源的材料逐步汇聚。</p>
+        </li>
+        <li>
+          <h3>战国至秦汉：文本编定</h3>
+          <p>《山经》与《海经》各部分的形成时间并不一致，学界一般倾向于认为全书主体在战国至汉代之间陆续整理成编。</p>
+        </li>
+        <li>
+          <h3>晋代：郭璞作注</h3>
+          <p>郭璞为《山海经》作注并配图（图已不存），使这部书得以更系统地流传，其注释也成为后世理解原文的重要桥梁。</p>
+        </li>
+        <li>
+          <h3>清代：校勘整理</h3>
+          <p>毕沅、郝懿行等学者对文本进行校勘与疏证，处理异文、错简与音义问题，奠定了现代通行本的基础。</p>
+        </li>
+        <li>
+          <h3>近现代：神话学视角</h3>
+          <p>随着神话学、民俗学与考古学的引入，《山海经》被从文学、历史、地理、宗教等多个角度重新审视，成为跨学科研究对象。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 相关典籍 -->
+  <section id="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>与它相关的几部早期文献</h2>
+        <p>把《山海经》放回先秦两汉的文献网络中，更容易看清它的位置与特点。</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <p class="card-tag">楚辞</p>
+          <h3>《天问》</h3>
+          <p>以连续发问的方式涉及大量神话与古史传说，保存了许多不见于他书的说法，可与《山海经》互证。</p>
+          <p class="card-meta">偏重文学表达与疑问结构</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">子书</p>
+          <h3>《淮南子》</h3>
+          <p>汉代综合性著作，包含女娲补天、后羿射日等神话叙述，文字相对连贯，常被用来补充《山海经》的简略记载。</p>
+          <p class="card-meta">叙事完整度较高</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">史书</p>
+          <h3>《史记》相关篇章</h3>
+          <p>司马迁在记述上古世系时对部分神话材料采取审慎态度，反映了神话历史化的过程，可作对照参考。</p>
+          <p class="card-meta">体现史家取舍</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">注疏</p>
+          <h3>郭璞注与清代校注</h3>
+          <p>原文简古，离开注释很难读通。选择版本时，是否带有完整注疏，往往比排版美观更影响阅读体验。</p>
+          <p class="card-meta">阅读必备辅助</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 阅读建议 -->
+  <section id="reading" class="alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>如何开始阅读这部古籍</h2>
+        <p>它不是一本可以“一口气读完”的书，方法比速度更重要。</p>
+      </div>
+      <div class="tips-grid">
+        <div class="tip">
+          <h3>先读神话，再读地理</h3>
+          <p>从《海外经》《大荒经》中故事性强的条目入手，建立兴趣后再回到《山经》看山川物产的记述方式。</p>
+        </div>
+        <div class="tip">
+          <h3>选择带注释的版本</h3>
+          <p>生僻字、古地名与异兽名称较多，带注音和注释的整理本可以显著降低阅读门槛。</p>
+        </div>
+        <div class="tip">
+          <h3>按主题横向对照</h3>
+          <p>同一神祇或故事可能分散在多卷中，按人物或主题整理条目，比逐卷顺读更容易形成整体印象。</p>
+        </div>
+        <div class="tip">
+          <h3>区分原文与后世演绎</h3>
+          <p>后世小说、影视中的形象与原文常有较大差异，阅读时注意区分，避免把改编当作原典。</p>
+        </div>
+        <div class="tip">
+          <h3>配合地图与工具书</h3>
+          <p>古地名方位与今地对应关系复杂，借助工具书或研究著作，可以避免对地理信息作过度推断。</p>
+        </div>
+        <div class="tip">
+          <h3>保持审慎态度</h3>
+          <p>书中内容涉及传说、巫术与想象，不宜直接当作信史，也不宜简单视为虚构，需结合学术讨论理解。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>常见问题</h2>
+        <p>围绕“最早的一部神话集”这一说法，读者最常提出的几个疑问。</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>“最早的一部神话集”一定指《山海经》吗？</summary>
+          <div class="faq-body">
+            <p>在通行的中国文学史与神话学叙述中，答案通常指向《山海经》，因为它是现存文献中神话材料最集中的一部。但“最早”需要限定：更早或同时期的甲骨、铭文、《诗经》《楚辞》等也保存了神话片段，只是不成系统、不成专书。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>《山海经》是神话小说吗？</summary>
+          <div class="faq-body">
+            <p>不是。它更接近地理博物类古籍，内容涵盖山川、物产、祭祀、部族与神怪传说。把它当作小说读会忽略其文献性质，把它当作纯粹地理书读又会遗漏大量神话信息。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>它的作者是谁？成书于什么年代？</summary>
+          <div class="faq-body">
+            <p>作者不详，也并非一人一时之作。学界一般认为全书主体在战国至汉代之间陆续编定，各部分形成时间不一。具体年代与层次问题至今仍有讨论，没有定论。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>普通读者应该选什么版本？</summary>
+          <div class="faq-body">
+            <p>建议选择带有完整注释、注音和校勘说明的整理本，优先考虑由专业古籍出版社或高校出版社推出的版本。若只是初步了解，也可以先读选注本或带有白话译文的普及读物，再回到原典。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>书中的神话和后世传说为什么差别很大？</summary>
+          <div class="faq-body">
+            <p>神话在流传中会不断被改写、整合与历史化。后世文学、宗教与民间信仰对神祇形象多有重塑，因此《山海经》里的西王母、女娲等形象，与后来常见的形象并不一致，这属于正常的文本演变现象。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>研究《山海经》需要哪些相关学科知识？</summary>
+          <div class="faq-body">
+            <p>常见的研究视角包括神话学、民俗学、历史地理、文字训诂与考古学等。不同视角关注的问题不同，阅读时可以先确定自己的兴趣方向，再有选择地参考相关研究。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>关于本站</h4>
+        <p>本站围绕“最早的一部神话集”这一主题，整理《山海经》的成书背景、内容结构、重要篇目与阅读方法，供神话与古典文献爱好者参考。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#intro">核心解答</a></li>
+          <li><a href="#structure">内容结构</a></li>
+          <li><a href="#chapters">重要篇目</a></li>
+          <li><a href="#timeline">成书源流</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>延伸阅读</h4>
+        <ul>
+          <li><a href="#compare">相关典籍</a></li>
+          <li><a href="#reading">阅读建议</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>说明</h4>
+        <p>文中涉及的年代、作者等问题，学界存在不同观点，本站采用较为通行的表述，具体研究请以专业论著为准。</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>最早的一部神话集 · 上古神话典籍导读</span>
+      <span>内容仅供学习与参考</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var faqs = document.querySelectorAll('.faq-item');
+  faqs.forEach(function(item){
+    item.addEventListener('toggle', function(){
+      if(item.open){
+        faqs.forEach(function(other){
+          if(other !== item){ other.open = false; }
+        });
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+                </html>
