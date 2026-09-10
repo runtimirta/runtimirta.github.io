@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>帆板-入门装备选择、技巧训练与安全指南</title>
+<meta name="description" content="帆板运动指南：了解帆板的基本构造、入门装备如何选择、基础技巧与训练方法、场地与风力判断、安全注意事项及常见问题，帮助新手安全开始帆板运动。">
+<meta name="keywords" content="帆板,帆板运动,帆板入门,帆板装备,帆板技巧,帆板安全,风帆冲浪">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --sea-deep:#0b3c5d;
+  --sea-mid:#1d6a8c;
+  --sea-light:#3fa9c9;
+  --foam:#e8f6fb;
+  --sand:#f6f1e7;
+  --sun:#f2a33c;
+  --ink:#12212b;
+  --muted:#5b7285;
+  --line:#d5e5ee;
+  --radius:14px;
+  --shadow:0 10px 28px rgba(11,60,93,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fbfdfe;
+  line-height:1.75;
+  font-size:16px;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+
+.wrap{width:min(1180px,92%);margin:0 auto;}
+
+/* ---------- 顶部公告 ---------- */
+.topbar{
+  background:var(--sea-deep);
+  color:#cfe8f3;
+  font-size:13px;
+  padding:7px 0;
+}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.topbar strong{color:#fff;font-weight:600;}
+
+/* ---------- 页眉 ---------- */
+.site-header{
+  background:linear-gradient(120deg,#0b3c5d 0%,#1d6a8c 58%,#3fa9c9 100%);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.site-header::after{
+  content:"";
+  position:absolute;
+  right:-120px;bottom:-140px;
+  width:460px;height:460px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.22),rgba(255,255,255,0) 70%);
+}
+.header-inner{
+  position:relative;z-index:2;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:16px 0;flex-wrap:wrap;
+}
+.logo{display:flex;align-items:center;gap:11px;}
+.logo-mark{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(150deg,#f2a33c,#ffd48a);
+  display:grid;place-items:center;
+  color:#0b3c5d;font-weight:800;font-size:20px;
+  box-shadow:0 6px 14px rgba(0,0,0,.18);
+}
+.logo-text b{display:block;font-size:19px;letter-spacing:1px;}
+.logo-text span{font-size:12px;color:#bfe3f1;letter-spacing:2px;}
+
+.main-nav ul{display:flex;gap:6px;flex-wrap:wrap;}
+.main-nav a{
+  display:block;padding:8px 14px;border-radius:999px;
+  font-size:15px;color:#dff2fa;transition:.25s;
+}
+.main-nav a:hover,.main-nav a.active{background:rgba(255,255,255,.18);color:#fff;}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;z-index:2;
+  padding:34px 0 46px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:36px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(28px,4vw,44px);
+  line-height:1.25;
+  letter-spacing:1px;
+  margin-bottom:16px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:#ffd48a;
+}
+.hero p.lead{
+  color:#d9eef7;
+  font-size:16.5px;
+  max-width:56ch;
+  margin-bottom:22px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:999px;
+  font-size:15px;
+  font-weight:600;
+  transition:.25s;
+  border:1.5px solid transparent;
+}
+.btn-primary{background:var(--sun);color:#3a2405;box-shadow:0 8px 20px rgba(242,163,60,.35);}
+.btn-primary:hover{background:#ffb955;transform:translateY(-2px);}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff;}
+.btn-ghost:hover{background:rgba(255,255,255,.14);}
+
+.hero-facts{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:var(--radius);
+  padding:22px;
+  backdrop-filter:blur(4px);
+}
+.hero-facts h2{
+  font-size:15px;font-weight:600;color:#ffd48a;
+  letter-spacing:1px;margin-bottom:14px;
+}
+.hero-facts li{
+  display:flex;gap:10px;align-items:flex-start;
+  font-size:14.5px;color:#e2f3fa;
+  padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.2);
+}
+.hero-facts li:last-child{border-bottom:none;}
+.hero-facts li i{
+  flex:0 0 auto;width:20px;height:20px;border-radius:50%;
+  background:rgba(255,212,138,.2);
+  color:#ffd48a;font-size:12px;font-style:normal;
+  display:grid;place-items:center;margin-top:3px;
+}
+
+/* ---------- 通用区块 ---------- */
+.section{padding:58px 0;}
+.section.alt{background:var(--foam);}
+.section.sand{background:var(--sand);}
+.section-head{max-width:760px;margin-bottom:34px;}
+.section-head .kicker{
+  display:inline-block;font-size:13px;letter-spacing:2px;
+  color:var(--sea-mid);font-weight:700;margin-bottom:10px;
+}
+.section-head h2{
+  font-size:clamp(22px,2.6vw,30px);
+  color:var(--sea-deep);
+  line-height:1.35;
+  margin-bottom:12px;
+}
+.section-head p{color:var(--muted);font-size:15.5px;}
+
+/* ---------- 帆板构成 ---------- */
+.parts-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+.part-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+  transition:.25s;
+}
+.part-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--sea-light);}
+.part-card .num{
+  font-size:13px;font-weight:700;color:var(--sea-light);
+  letter-spacing:1px;margin-bottom:8px;
+}
+.part-card h3{font-size:17px;color:var(--sea-deep);margin-bottom:8px;}
+.part-card p{font-size:14.5px;color:var(--muted);}
+
+/* ---------- 装备选择表 ---------- */
+.table-scroll{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--line);background:#fff;}
+table{width:100%;border-collapse:collapse;min-width:660px;font-size:14.5px;}
+thead th{
+  background:var(--sea-deep);color:#fff;text-align:left;
+  padding:13px 16px;font-weight:600;font-size:14px;white-space:nowrap;
+}
+tbody td{padding:13px 16px;border-top:1px solid var(--line);color:#334a5a;vertical-align:top;}
+tbody tr:nth-child(even){background:#f7fbfd;}
+tbody td:first-child{font-weight:600;color:var(--sea-deep);white-space:nowrap;}
+
+/* ---------- 技巧步骤 ---------- */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+  counter-reset:step;
+}
+.step{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:24px 22px 22px;
+  border:1px solid var(--line);
+  position:relative;
+}
+.step::before{
+  counter-increment:step;
+  content:counter(step,decimal-leading-zero);
+  position:absolute;top:-14px;left:22px;
+  background:var(--sea-light);color:#fff;
+  font-size:13px;font-weight:700;
+  padding:4px 12px;border-radius:999px;
+  letter-spacing:1px;
+}
+.step h3{font-size:16.5px;color:var(--sea-deep);margin:10px 0 8px;}
+.step p{font-size:14.5px;color:var(--muted);}
+
+/* ---------- 风力与环境 ---------- */
+.wind-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+}
+.wind-card{
+  border-left:4px solid var(--sea-light);
+  background:#fff;
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:18px 20px;
+  box-shadow:0 4px 14px rgba(11,60,93,.06);
+}
+.wind-card h3{font-size:16px;color:var(--sea-deep);margin-bottom:6px;}
+.wind-card .tag{
+  display:inline-block;font-size:12px;color:var(--sea-mid);
+  background:var(--foam);border-radius:999px;
+  padding:2px 10px;margin-bottom:8px;
+}
+.wind-card p{font-size:14px;color:var(--muted);}
+
+/* ---------- 安全提示 ---------- */
+.safety{
+  background:linear-gradient(135deg,#0b3c5d,#17527a);
+  color:#e6f4fa;
+  border-radius:20px;
+  padding:40px clamp(20px,4vw,46px);
+}
+.safety h2{font-size:clamp(21px,2.4vw,27px);color:#fff;margin-bottom:10px;}
+.safety > p{color:#b9dcec;font-size:15px;max-width:70ch;margin-bottom:26px;}
+.safety-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+}
+.safety-item{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:12px;
+  padding:16px 18px;
+}
+.safety-item b{display:block;color:#ffd48a;font-size:15px;margin-bottom:5px;}
+.safety-item span{font-size:14px;color:#cfe6f1;}
+
+/* ---------- 场地 ---------- */
+.spot-list{display:grid;gap:16px;}
+.spot{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:20px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px 22px;
+  align-items:start;
+}
+.spot h3{font-size:17px;color:var(--sea-deep);}
+.spot .type{
+  font-size:13px;color:var(--sea-mid);font-weight:600;letter-spacing:1px;
+}
+.spot p{font-size:14.5px;color:var(--muted);}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:12px;}
+.faq details{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:6px 20px;
+  transition:.2s;
+}
+.faq details[open]{border-color:var(--sea-light);box-shadow:0 6px 18px rgba(11,60,93,.08);}
+.faq summary{
+  cursor:pointer;list-style:none;
+  padding:14px 0;font-size:16px;font-weight:600;color:var(--sea-deep);
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"+";font-size:20px;color:var(--sea-light);font-weight:400;flex:0 0 auto;
+}
+.faq details[open] summary::after{content:"−";}
+.faq .answer{padding:0 0 16px;font-size:14.8px;color:var(--muted);}
+
+/* ---------- 侧栏式双栏 ---------- */
+.two-col{
+  display:grid;
+  grid-template-columns:1.6fr 1fr;
+  gap:34px;
+  align-items:start;
+}
+.side-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px;
+  margin-bottom:20px;
+}
+.side-card h3{
+  font-size:16.5px;color:var(--sea-deep);
+  padding-bottom:10px;margin-bottom:14px;
+  border-bottom:2px solid var(--foam);
+}
+.side-card ol{padding-left:20px;color:var(--muted);font-size:14.5px;}
+.side-card ol li{margin-bottom:9px;}
+.side-card p{font-size:14.5px;color:var(--muted);}
+.check-list li{
+  position:relative;padding-left:24px;
+  font-size:14.5px;color:var(--muted);margin-bottom:10px;
+}
+.check-list li::before{
+  content:"✓";position:absolute;left:0;top:0;
+  color:var(--sea-light);font-weight:700;
+}
+
+/* ---------- 页脚 ---------- */
+.site-footer{
+  background:#082c44;
+  color:#9dc3d6;
+  padding:46px 0 24px;
+  font-size:14px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1.2fr;
+  gap:30px;
+  padding-bottom:30px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.footer-grid h4{color:#fff;font-size:15px;margin-bottom:14px;}
+.footer-grid p{font-size:13.5px;line-height:1.8;}
+.footer-grid li{margin-bottom:8px;}
+.footer-grid a:hover{color:#ffd48a;}
+.footer-bottom{
+  padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:13px;color:#7ba7bd;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr;gap:26px;}
+  .two-col{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  body{font-size:15.5px;}
+  .section{padding:42px 0;}
+  .header-inner{padding:14px 0;}
+  .main-nav ul{gap:2px;}
+  .main-nav a{padding:7px 11px;font-size:14px;}
+  .spot{grid-template-columns:1fr;gap:8px;}
+  .footer-grid{grid-template-columns:1fr;gap:24px;}
+  .safety{padding:30px 20px;border-radius:16px;}
+  .hero{padding:26px 0 36px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><strong>帆板入门提示：</strong>下水前确认风力、水流与救援条件，佩戴浮力装备。</span>
+    <span>装备 · 技巧 · 安全 · 场地</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="logo">
+      <div class="logo-mark">帆</div>
+      <div class="logo-text">
+        <b>帆板指南</b>
+        <span>WINDSURFING</span>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#intro" class="active">认识帆板</a></li>
+        <li><a href="#gear">装备选择</a></li>
+        <li><a href="#skills">技巧训练</a></li>
+        <li><a href="#wind">风力判断</a></li>
+        <li><a href="#safety">安全须知</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="wrap hero">
+    <div>
+      <h1>帆板：借助风力在水面滑行的<em>入门与进阶指南</em></h1>
+      <p class="lead">帆板是一项站在板上、通过操控帆具捕捉风力前进的水上运动。它既可以是轻松的湖面巡航，也可以是追求速度与跳跃的进阶玩法。本文从器材构成、装备挑选、基础动作、风力判断到安全要点，帮助第一次接触帆板的人建立清晰的认识。</p>
+      <div class="hero-actions">
+        <a href="#gear" class="btn btn-primary">查看装备选择</a>
+        <a href="#skills" class="btn btn-ghost">了解基础技巧</a>
+      </div>
+    </div>
+    <aside class="hero-facts">
+      <h2>开始前先弄清楚</h2>
+      <ul>
+        <li><i>1</i><span>帆板由板体、帆具、桅杆、横杆与万向节等部分组成，各部件规格需相互匹配。</span></li>
+        <li><i>2</i><span>新手通常从较大容积的板体和较小面积的帆开始，稳定性更高。</span></li>
+        <li><i>3</i><span>风力过强或过弱都不适合练习，中等稳定的风况更利于形成动作记忆。</span></li>
+        <li><i>4</i><span>浮力背心、头盔与合适的鞋子是基础防护，不要省略。</span></li>
+      </ul>
+    </aside>
+  </div>
+</header>
+
+<main>
+
+  <!-- 认识帆板 -->
+  <section class="section" id="intro">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">认识帆板</span>
+        <h2>帆板是什么，它由哪些部分组成</h2>
+        <p>帆板（Windsurfing）又称风帆冲浪，指人站在板面上，用双手通过横杆控制帆的角度，借助风力推动板体在水面滑行。理解各部件的作用，是判断装备是否合适、动作是否到位的基础。</p>
+      </div>
+      <div class="parts-grid">
+        <article class="part-card">
+          <div class="num">01</div>
+          <h3>板体</h3>
+          <p>决定浮力与滑行特性。容积越大越稳定、越适合新手；容积越小越灵活，适合有经验者在强风中操控。板底形状与尾鳍配置会影响起滑速度和转向表现。</p>
+        </article>
+        <article class="part-card">
+          <div class="num">02</div>
+          <h3>帆与桅杆</h3>
+          <p>帆是捕捉风力的核心，面积以平方米标注。桅杆插入帆袖提供支撑，其弯曲特性需与帆的设计相匹配，否则会影响受风形状与操控手感。</p>
+        </article>
+        <article class="part-card">
+          <div class="num">03</div>
+          <h3>横杆</h3>
+          <p>连接在桅杆上，是双手主要握持的位置。横杆高度可调，通常以肩膀到下巴之间为宜，过高或过低都会增加手臂与腰背负担。</p>
+        </article>
+        <article class="part-card">
+          <div class="num">04</div>
+          <h3>万向节</h3>
+          <p>连接帆具与板体，允许帆向各个方向倾倒。它是帆板能够灵活调整帆角的关键部件，日常需检查其磨损情况。</p>
+        </article>
+        <article class="part-card">
+          <div class="num">05</div>
+          <h3>尾鳍</h3>
+          <p>位于板尾下方，起到定向与抑制侧滑的作用。不同尺寸的尾鳍适配不同风力与板型，更换时需参考板体说明。</p>
+        </article>
+        <article class="part-card">
+          <div class="num">06</div>
+          <h3>脚套与绑带</h3>
+          <p>帮助在滑行时固定双脚、提升控制力。新手阶段通常先不使用脚套，待平衡与起滑稳定后再逐步尝试。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 装备选择 -->
+  <section class="section alt" id="gear">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">装备选择</span>
+        <h2>新手如何挑选第一套帆板装备</h2>
+        <p>选装备的核心不是追求高性能，而是让学习过程更顺畅。体重、常去水域的风况、可存放和运输的条件，都会影响选择方向。下表为一般性参考，具体仍需以器材厂商说明和实际试用的感受为准。</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>装备项</th>
+              <th>新手倾向</th>
+              <th>进阶倾向</th>
+              <th>选择要点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>板体容积</td>
+              <td>较大容积，浮力充足</td>
+              <td>较小容积，响应更快</td>
+              <td>容积偏大时更容易站稳和重新上板，学习成本更低</td>
+            </tr>
+            <tr>
+              <td>帆面积</td>
+              <td>偏小面积</td>
+              <td>根据风力搭配多张帆</td>
+              <td>面积小则受力轻，风大时更易控制，适合建立动作基础</td>
+            </tr>
+            <tr>
+              <td>桅杆</td>
+              <td>与帆配套的基础款</td>
+              <td>按碳含量与弯曲曲线选择</td>
+              <td>务必确认与帆的型号匹配，不匹配会明显影响手感</td>
+            </tr>
+            <tr>
+              <td>横杆</td>
+              <td>可调范围大的铝合金款</td>
+              <td>轻量碳纤维款</td>
+              <td>可调范围大便于多人共用，也方便随身高调整</td>
+            </tr>
+            <tr>
+              <td>防护装备</td>
+              <td>浮力背心、头盔、防滑鞋</td>
+              <td>按玩法补充防晒与保暖装备</td>
+              <td>水温偏低时需考虑保暖服，避免长时间浸泡导致失温</td>
+            </tr>
+            <tr>
+              <td>运输与存放</td>
+              <td>车顶架或俱乐部寄存</td>
+              <td>专用板包与帆包</td>
+              <td>提前确认运输方式，避免因搬运不便而减少下水次数</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技巧训练 -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">技巧训练</span>
+        <h2>从零开始的基础动作顺序</h2>
+        <p>帆板学习讲究循序渐进。建议在教练或熟练者陪同下，先在浅水、风浪较小的环境练习，把每个动作练到稳定后再进入下一步。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <h3>岸上模拟与安全检查</h3>
+          <p>先在陆地上熟悉握杆姿势、起帆动作和身体站位，同时检查帆具连接、绳索磨损与万向节状态，确认无松动后再下水。</p>
+        </article>
+        <article class="step">
+          <h3>上板与站姿</h3>
+          <p>在浅水中把板体对准风向，双手扶杆缓慢站起。双脚位于板体中线两侧，膝盖微屈，重心放低，视线看向前进方向而非脚下。</p>
+        </article>
+        <article class="step">
+          <h3>起帆</h3>
+          <p>用背部与腿部力量而非单纯手臂力量把帆拉起，让风逐渐进入帆面。身体后倾形成对抗，帆与身体之间保持稳定的三角形结构。</p>
+        </article>
+        <article class="step">
+          <h3>直线航行</h3>
+          <p>通过调整帆的倾角与身体前后重心控制方向与速度。帆向后倾通常偏向迎风，向前倾则偏向顺风，动作宜小幅微调。</p>
+        </article>
+        <article class="step">
+          <h3>转向</h3>
+          <p>基础转向包括迎风换舷与顺风转向。新手可先练习较容易掌握的转向方式，逐步体会帆面受力变化与身体重心转移的配合。</p>
+        </article>
+        <article class="step">
+          <h3>落水后重新起帆</h3>
+          <p>落水是学习过程的一部分。保持冷静，先确认自身与器材位置，再按起帆步骤重新把帆拉起，避免被帆面覆盖。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 风力判断 -->
+  <section class="section sand" id="wind">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">风力与环境</span>
+        <h2>看懂风况再决定是否下水</h2>
+        <p>帆板对风力变化非常敏感。出发前查看天气预报的风速、风向与阵风情况，到达现场后再结合水面状况与自身水平做最终判断。</p>
+      </div>
+      <div class="wind-grid">
+        <article class="wind-card">
+          <span class="tag">微风</span>
+          <h3>风力偏小</h3>
+          <p>水面波纹细碎，帆面难以获得足够推力。此时适合练习平衡、站姿与起帆动作，不必强求滑行。</p>
+        </article>
+        <article class="wind-card">
+          <span class="tag">中等</span>
+          <h3>风力适中</h3>
+          <p>水面出现持续小浪，通常是新手练习直线航行与转向的较理想条件，但仍需留意阵风带来的突然变化。</p>
+        </article>
+        <article class="wind-card">
+          <span class="tag">偏强</span>
+          <h3>风力较大</h3>
+          <p>白浪明显、阵风频繁时，对体力与操控要求显著提高。经验不足者建议暂缓下水，或更换更小面积的帆。</p>
+        </article>
+        <article class="wind-card">
+          <span class="tag">环境</span>
+          <h3>水流与地形</h3>
+          <p>近岸礁石、航道、渔网与离岸流都会带来额外风险。选择开阔、有救援条件、其他水上活动者较多的水域更稳妥。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 安全 -->
+  <section class="section" id="safety">
+    <div class="wrap">
+      <div class="safety">
+        <h2>帆板安全须知</h2>
+        <p>水上运动的风险往往来自准备不足而非动作难度。以下事项建议在每次下水前逐项确认，尤其是独自前往或前往陌生水域时。</p>
+        <div class="safety-list">
+          <div class="safety-item">
+            <b>佩戴浮力装备</b>
+            <span>浮力背心或救生衣应合身并扣紧，头盔在浅水区与有障碍物的水域尤为重要。</span>
+          </div>
+          <div class="safety-item">
+            <b>告知行程</b>
+            <span>出发前告知家人或同伴下水地点与预计返回时间，随身携带防水通讯工具。</span>
+          </div>
+          <div class="safety-item">
+            <b>量力而行</b>
+            <span>体力下降、天气转坏或装备出现异常时，及时返回岸边，不要勉强继续。</span>
+          </div>
+          <div class="safety-item">
+            <b>远离危险区域</b>
+            <span>避开航道、养殖区、礁石带与人群密集的游泳区，注意水下标示与浮标。</span>
+          </div>
+          <div class="safety-item">
+            <b>注意水温</b>
+            <span>低温水域需穿着保暖服，控制单次下水时长，出现发抖、反应迟钝应立刻上岸。</span>
+          </div>
+          <div class="safety-item">
+            <b>器材检查</b>
+            <span>下水前检查绳索、连接件与帆面是否有破损，避免滑行中突然失效。</span>
+          </div>
+          <div class="safety-item">
+            <b>结伴练习</b>
+            <span>新手尽量与同伴或教练同行，互相观察位置，便于在需要时提供协助。</span>
+          </div>
+          <div class="safety-item">
+            <b>防晒与补水</b>
+            <span>水面反射会加强紫外线，长时间户外活动应做好防晒并适时补充水分。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 水域与练习方式 -->
+  <section class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">练习环境</span>
+        <h2>不同水域适合的练习方向</h2>
+        <p>水域条件直接决定学习节奏。以下为常见环境的普遍特点，实际选择还需结合当地管理规定、天气与救援条件综合判断。</p>
+      </div>
+      <div class="spot-list">
+        <article class="spot">
+          <div>
+            <h3>湖泊与水库</h3>
+            <div class="type">水面较平稳</div>
+          </div>
+          <p>风浪相对温和、岸边可达性好，适合新手熟悉上板、起帆与直线航行。需注意部分水库对水上活动有管理规定，下水前应确认是否允许。</p>
+        </article>
+        <article class="spot">
+          <div>
+            <h3>海湾与近岸海域</h3>
+            <div class="type">风力较稳定</div>
+          </div>
+          <p>海风通常较为持续，适合练习滑行与转向。要留意潮汐、离岸流与船只通行，避免在航道或养殖设施附近活动。</p>
+        </article>
+        <article class="spot">
+          <div>
+            <h3>内河与河口</h3>
+            <div class="type">水流有变化</div>
+          </div>
+          <p>水流方向与速度会随季节和降雨变化，对操控提出更高要求。建议先了解当地水文情况，并选择水流平缓的河段练习。</p>
+        </article>
+        <article class="spot">
+          <div>
+            <h3>帆板俱乐部与培训点</h3>
+            <div class="type">有指导与救援</div>
+          </div>
+          <p>通常提供器材租用、课程教学与现场看护，适合完全零基础的人起步。可通过当地体育部门或水上运动协会了解正规培训机构信息。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 训练计划 + 侧栏 -->
+  <section class="section">
+    <div class="wrap two-col">
+      <div>
+        <div class="section-head">
+          <span class="kicker">进阶思路</span>
+          <h2>如何安排持续练习</h2>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>初学阶段该练多久</summary>
+            <div class="answer">单次下水时间不宜过长，体力下降后动作容易变形，也更容易发生意外。可把练习拆分为若干短时段，中间上岸休息、补充水分，并回顾刚才的动作感受。</div>
+          </details>
+          <details>
+            <summary>什么时候可以尝试脚套</summary>
+            <div class="answer">当能够稳定站立、完成起帆与直线航行，并且落水后能从容重新起帆时，再逐步尝试脚套。初次使用应选择风浪较小的环境，避免因无法快速脱出而增加风险。</div>
+          </details>
+          <details>
+            <summary>需要请教练吗</summary>
+            <div class="answer">帆板涉及器材装配、风况判断与水上自救等内容，有经验的指导者可以帮助建立正确动作、减少无效尝试。若身边没有熟练者，参加正规培训通常是更稳妥的起步方式。</div>
+          </details>
+          <details>
+            <summary>如何提升滑行稳定性</summary>
+            <div class="answer">稳定性来自重心控制与帆面受力的平衡。练习时可刻意放慢动作，感受身体前后移动对板体姿态的影响，避免用手臂硬拉横杆。</div>
+          </details>
+          <details>
+            <summary>器材平时怎么保养</summary>
+            <div class="answer">每次使用后用清水冲洗帆具与连接件，去除沙粒与盐分；帆面避免长时间暴晒；绳索、万向节等易损件定期检查，发现磨损及时更换。</div>
+          </details>
+        </div>
+      </div>
+
+      <aside>
+        <div class="side-card">
+          <h3>下水前检查清单</h3>
+          <ul class="check-list">
+            <li>天气预报与现场风况是否在可控范围</li>
+            <li>浮力装备、头盔是否穿戴到位</li>
+            <li>帆具连接与绳索有无磨损</li>
+            <li>通讯工具是否防水可用</li>
+            <li>同伴或岸上人员是否知情</li>
+            <li>体力与身体状况是否适合运动</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>常见误区</h3>
+          <ol>
+            <li>只看风力数值，忽略阵风与风向变化。</li>
+            <li>用大帆在强风中练习，导致难以控制。</li>
+            <li>靠手臂力量拉帆，忽略身体后倾与腿部发力。</li>
+            <li>独自前往陌生水域，缺少必要的救援条件。</li>
+            <li>忽略保暖与防晒，长时间暴露在户外。</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section alt" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">常见问题</span>
+        <h2>关于帆板的常见疑问</h2>
+        <p>以下回答基于一般性运动常识整理，具体器材参数与教学安排请以专业人员指导为准。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>不会游泳可以学帆板吗</summary>
+          <div class="answer">帆板属于水上运动，具备基本游泳能力与水中自救意识是重要的安全前提。即使穿着浮力装备，也建议先在安全水域掌握基本的游泳与漂浮技能，再考虑下水练习。</div>
+        </details>
+        <details>
+          <summary>帆板和冲浪有什么区别</summary>
+          <div class="answer">冲浪主要依靠海浪的推力，人站在板上用身体平衡控制方向；帆板则通过帆具捕捉风力前进，对浪的依赖较小，在湖泊、水库等没有海浪的水域同样可以进行。</div>
+        </details>
+        <details>
+          <summary>需要多大的体力</summary>
+          <div class="answer">帆板需要一定的核心力量与腿部支撑，但正确动作依靠身体重量与帆面受力平衡，而不是单纯比拼臂力。随着技术提升，同等风况下的体力消耗会明显下降。</div>
+        </details>
+        <details>
+          <summary>一套入门装备大概包含什么</summary>
+          <div class="answer">通常包括板体、帆、桅杆、横杆、万向节与尾鳍等基本部件，另需配备浮力装备、头盔与合适的鞋子。购买前建议确认各部件规格是否匹配，并考虑运输与存放条件。</div>
+        </details>
+        <details>
+          <summary>什么季节适合练习</summary>
+          <div class="answer">气温与水温适宜、风力相对稳定的季节更适合练习。寒冷季节下水需配备保暖服并缩短单次时长，同时更加注意上岸后的保暖与身体状态。</div>
+        </details>
+        <details>
+          <summary>落水后应该怎么做</summary>
+          <div class="answer">先保持冷静，确认自身与器材位置，避免被帆面覆盖。抓住板体或横杆稳定身体，观察周围环境，再按起帆步骤重新把帆拉起。若体力不足或环境不利，应优先保证自身安全并寻求帮助。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>帆板指南</h4>
+        <p>围绕帆板运动整理的入门知识、装备选择、技巧训练与安全提示，帮助初学者建立清晰、稳妥的学习路径。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#intro">认识帆板</a></li>
+          <li><a href="#gear">装备选择</a></li>
+          <li><a href="#skills">技巧训练</a></li>
+          <li><a href="#wind">风力判断</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>安全相关</h4>
+        <ul>
+          <li><a href="#safety">安全须知</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#wind">水域与风况</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>温馨提示</h4>
+        <p>水上运动存在一定风险，请根据自身能力选择练习环境，遵守当地水域管理规定，必要时接受专业指导。</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>帆板运动知识整理 · 内容仅供参考</span>
+      <span>安全第一，量力而行</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('.main-nav a');
+  var sections = [];
+  links.forEach(function(a){
+    var id = a.getAttribute('href');
+    if(id && id.charAt(0) === '#'){
+      var el = document.querySelector(id);
+      if(el){ sections.push({link:a, el:el}); }
+    }
+  });
+  if(!sections.length) return;
+
+  function onScroll(){
+    var pos = window.scrollY + 140;
+    var current = sections[0];
+    sections.forEach(function(item){
+      if(item.el.offsetTop <= pos){ current = item; }
+    });
+    links.forEach(function(a){ a.classList.remove('active'); });
+    if(current){ current.link.classList.add('active'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+  </html>
